@@ -9,6 +9,7 @@ import com.redenergy.model.MeterRead;
 
 /**
  * This is a interface for SimpleNem12Parser 
+ * 
  * @author Saneera Yapa
  */
 public interface SimpleNem12Parser {

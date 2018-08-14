@@ -31,10 +31,10 @@ public class SimpleNem12ParserImpl implements SimpleNem12Parser {
 
 	private final Logger LOG = LoggerFactory.getLogger(SimpleNem12ParserImpl.class);
 	 
-	/** The validator. */
+	/** The validator to validate csv file content */
 	private SimpleNemParserValidator validator;
 	
-	/** The csv reader. */
+	/** The csv reader to reader for the csv */
 	private CsvReader csvReader;
 	
 	

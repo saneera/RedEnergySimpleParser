@@ -2,7 +2,7 @@ package com.redenergy.exception;
 
 
 /**
- * The Class SimpleNem12ParserException.
+ * The Class SimpleNem12ParserException. this is handling the exception with common format
  * 
  * @author Saneera Yapa
  */
