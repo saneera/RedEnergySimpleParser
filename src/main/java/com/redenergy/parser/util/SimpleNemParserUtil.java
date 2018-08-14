@@ -17,7 +17,7 @@ import com.redenergy.model.EnergyUnit;
 import com.redenergy.model.MeterRead;
 import com.redenergy.model.MeterVolume;
 import com.redenergy.model.Quality;
-import com.redenergy.validate.SimpleNemParserValidator;
+import com.redenergy.parser.validate.SimpleNemParserValidator;
 
 
 public class SimpleNemParserUtil {

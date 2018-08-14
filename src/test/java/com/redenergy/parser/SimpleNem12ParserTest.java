@@ -5,8 +5,8 @@ import java.io.File;
 import org.junit.Before;
 
 import com.redenergy.csv.CsvReader;
-import com.redenergy.validate.SimpleNemParserValidator;
-import com.redenergy.validate.SimpleNemParserValidatorImpl;
+import com.redenergy.parser.validate.SimpleNemParserValidator;
+import com.redenergy.parser.validate.SimpleNemParserValidatorImpl;
 
 /**
  * SimpleNem12ParserTest test class for the parser implementation

@@ -13,8 +13,8 @@ import com.redenergy.csv.CsvReader;
 import com.redenergy.exception.SimpleNem12ParserException;
 import com.redenergy.model.MeterRead;
 import com.redenergy.parser.util.SimpleNemParserUtil;
-import com.redenergy.validate.SimpleNemParserValidator;
-import com.redenergy.validate.SimpleNemParserValidatorImpl;
+import com.redenergy.parser.validate.SimpleNemParserValidator;
+import com.redenergy.parser.validate.SimpleNemParserValidatorImpl;
 
 import lombok.Getter;
 import lombok.Setter;

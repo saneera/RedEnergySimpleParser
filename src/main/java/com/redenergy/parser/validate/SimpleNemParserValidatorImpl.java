@@ -1,4 +1,4 @@
-package com.redenergy.validate;
+package com.redenergy.parser.validate;
 
 import java.util.List;
 
@@ -11,6 +11,7 @@ import com.redenergy.csv.CsvReader;
 import com.redenergy.exception.SimpleNem12ParserException;
 import com.redenergy.model.EnergyUnit;
 import com.redenergy.model.Quality;
+import com.redenergy.validate.SimpleNemParserValidatorTest;
 
 
 /**

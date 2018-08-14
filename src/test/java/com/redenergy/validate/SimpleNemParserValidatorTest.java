@@ -5,6 +5,8 @@ import org.junit.Test;
 
 import com.redenergy.csv.CsvReader;
 import com.redenergy.exception.SimpleNem12ParserException;
+import com.redenergy.parser.validate.SimpleNemParserValidator;
+import com.redenergy.parser.validate.SimpleNemParserValidatorImpl;
 
 import org.junit.Assert;
 

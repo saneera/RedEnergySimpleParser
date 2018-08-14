@@ -1,4 +1,4 @@
-package com.redenergy.validate;
+package com.redenergy.parser.validate;
 
 import java.util.List;
 
