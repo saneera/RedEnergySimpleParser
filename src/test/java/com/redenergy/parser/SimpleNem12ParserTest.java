@@ -48,11 +48,9 @@ public class SimpleNem12ParserTest {
 		  Assert.assertEquals("6123456789", firstRecord.getNmi());
 		  Assert.assertEquals(EnergyUnit.KWH, firstRecord.getEnergyUnit());
 		  Assert.assertNotNull(firstRecord.getVolumes());
-		  Assert.assertEquals(7, firstRecord.getVolumes().size());
-		  
+		  Assert.assertEquals(7, firstRecord.getVolumes().size());		  
 		  MeterRead read6123456789 = meterReads.stream().filter(mr -> mr.getNmi().equals("6123456789")).findFirst().get();
-		  Assert.assertEquals(new BigDecimal("-36.84"), read6123456789.getTotalVolume());
-			 
+		  Assert.assertEquals(new BigDecimal("-36.84"), read6123456789.getTotalVolume());			 
 	      MeterRead read6987654321 = meterReads.stream().filter(mr -> mr.getNmi().equals("6987654321")).findFirst().get();
 	      Assert.assertEquals(new BigDecimal("14.33"), read6987654321.getTotalVolume());
 	  
@@ -61,8 +59,7 @@ public class SimpleNem12ParserTest {
 	
 	  @Test
 	  public void testMeterReadsWithInvalidCSV() throws Exception {
-		  //need to implement
-	  
+		  //TODO	  
 	  }
 	
 	
