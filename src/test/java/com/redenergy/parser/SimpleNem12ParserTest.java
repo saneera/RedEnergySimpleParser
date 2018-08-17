@@ -86,14 +86,14 @@ public class SimpleNem12ParserTest {
 	  }
 	  
 	  
-	  //check empty csv file 
+	  //check empty csv file should throws SimpleNem12ParserException
 	  @Test(expected = SimpleNem12ParserException.class)
 	  public void testMeterReadsWithEmptyCSV() throws Exception {
 		  csvReader.setCsvFile(invalidEmptyCsvFile);	  
 		  Collection<MeterRead> meterReads = nem12ParserImpl.parseSimpleNem12(invalidEmptyCsvFile);		 
 	  }
 	  
-	  //check invalid date csv 
+	  //check invalid date csv should throws SimpleNem12ParserException
 	  @Test(expected = SimpleNem12ParserException.class)
 	  public void testMeterReadsInvalidDateCSV() throws Exception {
 		  csvReader.setCsvFile(invalidDateCsvFile);	  
