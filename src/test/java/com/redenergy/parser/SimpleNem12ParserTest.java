@@ -40,10 +40,10 @@ public class SimpleNem12ParserTest {
 		classLoader = getClass().getClassLoader();	
 		
 		validCsvFile  = new File(classLoader.getResource("SimpleNem12.csv").getFile());
-		invalidHeaderCsvFile  = new File(classLoader.getResource("SimpleNem13InvalidHeader.csv").getFile());
-		invalidFooterCsvFile  = new File(classLoader.getResource("SimpleNem13InvalidFooter.csv").getFile());
-		invalidEmptyCsvFile  = new File(classLoader.getResource("SimpleNem13Empty.csv").getFile());	
-		invalidDateCsvFile  = new File(classLoader.getResource("SimpleNem13InvalidDate.csv").getFile());	
+		invalidHeaderCsvFile  = new File(classLoader.getResource("SimpleNem12InvalidHeader.csv").getFile());
+		invalidFooterCsvFile  = new File(classLoader.getResource("SimpleNem12InvalidFooter.csv").getFile());
+		invalidEmptyCsvFile  = new File(classLoader.getResource("SimpleNem12Empty.csv").getFile());	
+		invalidDateCsvFile  = new File(classLoader.getResource("SimpleNem12InvalidDate.csv").getFile());	
 		
 		nem12ParserImpl.setCsvReader(csvReader);
 		nem12ParserImpl.setValidator(validator);		
