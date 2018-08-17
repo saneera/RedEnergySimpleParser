@@ -93,7 +93,7 @@ public class SimpleNem12ParserTest {
 		  Collection<MeterRead> meterReads = nem12ParserImpl.parseSimpleNem12(invalidEmptyCsvFile);		 
 	  }
 	  
-	  //check invalid date csv should throws SimpleNem12ParserException
+	  //check invalid date csv should throws SimpleNem12ParserException //300,2016111,-50.8,A
 	  @Test(expected = SimpleNem12ParserException.class)
 	  public void testMeterReadsInvalidDateCSV() throws Exception {
 		  csvReader.setCsvFile(invalidDateCsvFile);	  
