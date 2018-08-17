@@ -48,6 +48,7 @@ public class SimpleNem12ParserTest {
 	}
 	
 	
+	 //valid csv file
 	  @Test
 	  public void testMeterReadsWithValidCSV() throws Exception {
 		 
@@ -67,6 +68,7 @@ public class SimpleNem12ParserTest {
 	  }
 	
 	
+	  //header does not have record 200 should throws SimpleNem12ParserException
 	  @Test(expected = SimpleNem12ParserException.class)
 	  public void testMeterReadsWithInvalidHeaderCSV() throws Exception {
 		  csvReader.setCsvFile(invalidHeaderCsvFile);	  
@@ -74,7 +76,7 @@ public class SimpleNem12ParserTest {
 		  
 	  }
 	
-	  
+	  //footer does not have record 900 should throws SimpleNem12ParserException
 	  @Test(expected = SimpleNem12ParserException.class)
 	  public void testMeterReadsWithInvalidFooterCSV() throws Exception {
 		  csvReader.setCsvFile(invalidFooterCsvFile);	  
@@ -82,6 +84,7 @@ public class SimpleNem12ParserTest {
 	  }
 	  
 	  
+	  //check empty csv file 
 	  @Test(expected = SimpleNem12ParserException.class)
 	  public void testMeterReadsWithEmptyCSV() throws Exception {
 		  csvReader.setCsvFile(invalidEmptyCsvFile);	  
