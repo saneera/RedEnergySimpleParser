@@ -30,6 +30,7 @@ public class SimpleNem12ParserTest {
 	private File invalidHeaderCsvFile;
 	private File invalidFooterCsvFile;
 	private File invalidEmptyCsvFile;
+	private File invalidDateCsvFile;
 	
 	@Before
 	public void setUp() throws Exception {
@@ -42,6 +43,7 @@ public class SimpleNem12ParserTest {
 		invalidHeaderCsvFile  = new File(classLoader.getResource("SimpleNem13InvalidHeader.csv").getFile());
 		invalidFooterCsvFile  = new File(classLoader.getResource("SimpleNem13InvalidFooter.csv").getFile());
 		invalidEmptyCsvFile  = new File(classLoader.getResource("SimpleNem13Empty.csv").getFile());	
+		invalidDateCsvFile  = new File(classLoader.getResource("SimpleNem13InvalidDate.csv").getFile());	
 		
 		nem12ParserImpl.setCsvReader(csvReader);
 		nem12ParserImpl.setValidator(validator);		
@@ -68,7 +70,7 @@ public class SimpleNem12ParserTest {
 	  }
 	
 	
-	  //header does not have record 200 should throws SimpleNem12ParserException
+	  //header does not have record 100 should throws SimpleNem12ParserException
 	  @Test(expected = SimpleNem12ParserException.class)
 	  public void testMeterReadsWithInvalidHeaderCSV() throws Exception {
 		  csvReader.setCsvFile(invalidHeaderCsvFile);	  
@@ -89,6 +91,13 @@ public class SimpleNem12ParserTest {
 	  public void testMeterReadsWithEmptyCSV() throws Exception {
 		  csvReader.setCsvFile(invalidEmptyCsvFile);	  
 		  Collection<MeterRead> meterReads = nem12ParserImpl.parseSimpleNem12(invalidEmptyCsvFile);		 
+	  }
+	  
+	  //check invalid date csv 
+	  @Test(expected = SimpleNem12ParserException.class)
+	  public void testMeterReadsInvalidDateCSV() throws Exception {
+		  csvReader.setCsvFile(invalidDateCsvFile);	  
+		  Collection<MeterRead> meterReads = nem12ParserImpl.parseSimpleNem12(invalidDateCsvFile);		 
 	  }
 	
 }
